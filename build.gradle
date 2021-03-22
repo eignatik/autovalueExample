@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'space.eignatik'
+version '1.0-SNAPSHOT'
+
+def autoValueVersion = '1.7.4'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'com.google.truth', name: 'truth', version: '1.0.1'
+    compile             "com.google.auto.value:auto-value-annotations:${autoValueVersion}"
+    annotationProcessor "com.google.auto.value:auto-value:${autoValueVersion}"
+    compile group: 'com.google.collections', name: 'google-collections', version: '1.0-rc2'
+    compile group: 'com.google.inject', name: 'guice', version: '4.0'
+}
